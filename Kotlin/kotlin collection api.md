@@ -39,7 +39,7 @@ println(list.minus("Five"))
 출력: [One, Two, Three, Four]
 ```
 
-## plus (fun \<T> Iterable\<T>.plus(element: T): List \<T>)
+## plus (fun \<T> Iterable\<T>.plus(element: T): List\<T>)
 지정된 항목이 추가된 리스트를 반환. add() 메소드와 달리 새로운 리스트를 만들어 반환한다.
 
 항목 대신 array, collection, range 등이 들어갈 수 있다.
@@ -50,7 +50,7 @@ println(list.plus(listOf("Six", "Seven")))
 출력: [One, Two, Three, Four, Five, Six, Seven]
 ```
 
-## first (fun \<T> List\<T>.first() :T)
+## first (fun \<T> List\<T>.first(): T)
 첫 번째 항목을 반환합니다.
 
 ```kotlin
@@ -59,7 +59,7 @@ println(list.first())
 출력: One
 ```
 
-## Last (fun \<T> List\<T>.Last(): T)
+## last (fun \<T> List\<T>.Last(): T)
 마지막 항목을 반환합니다.
 
 ```kotlin
@@ -274,7 +274,7 @@ println(list.filterNot { it.startsWith("T") })
 출력: [One, Four, Five]
 ```
 
-## find (fun \<T> Iterable\<T>.find(predicate: (T) -> Boolean): T?
+## find (fun \<T> Iterable\<T>.find(predicate: (T) -> Boolean): T?)
 주어진 조건에 만족하는 첫번째 원소를 반환, 조건에 만족하지 않으면 null을 반환한다.
 
 ```kotlin
@@ -283,7 +283,7 @@ println(list.find { it.startsWith("T") })
 출력: Two
 ```
 
-## findLast (fun \<T> Iterable\<T>.findLast(predicate: (T) -> Boolean): T?
+## findLast (fun \<T> Iterable\<T>.findLast(predicate: (T) -> Boolean): T?)
 주어진 조건에 만족하는 마지막 항목을 반환, 조건에 만족하지 않으면 null을 반환한다.
 
 ```kotlin
