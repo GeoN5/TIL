@@ -71,7 +71,8 @@ override fun onCreate(savedInstanceState: Bundle) {
 }
 ```
 이제 Binding Class Instance를 사용해서 view를 참조할 수 있다.
-``kotlin
+
+```kotlin
 binding.name.text = viewModel.name
 binding.button.setOnClickListener { viewModel.userClicked() }
 ```
@@ -124,6 +125,7 @@ View Binding에는 `findViewById`를 사용하는 것에 비해서 중요한 장
     즉, Class Cast Exception이 발생할 위험이 없다.
 
 이러한 차이점은 layout과 코드 사이의 비호환성으로 인해 runtime이 아닌 compile time에 build가 실패하게 된다는 것을 의미한다.
+
 ---
 ## Comparison with data binding
 
@@ -138,6 +140,6 @@ View Binding과 Data Binding 모두 view를 직접 참조하는데 사용할 수
 * View Binding은 **레이아웃 변수 또는 레이아웃 표현식**을 지원하지 않으므로 XML layout 파일에서 직접 동적 UI 컨텐츠를 선언하는 데 사용할 수 없다.
 * View Binding은 **양방향 데이터 결합**을 지원하지 않는다.
 
-위 사항을 고려할 때 일부 사례에서 프로젝트에 View Binding과 Data Binding을 모두 사용하는 것이 좋다.
-
-고급 기능이 필요한 layout에는 Data Binding을, 고급 기능이 필요 없는 layout에는 View Binding을 사용할 수 있다.
+>위 사항을 고려할 때 일부 사례에서 프로젝트에 View Binding과 Data Binding을 모두 사용하는 것이 좋다.
+>
+>고급 기능이 필요한 layout에는 Data Binding을, 고급 기능이 필요 없는 layout에는 View Binding을 사용할 수 있다.
