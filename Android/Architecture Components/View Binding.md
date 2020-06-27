@@ -112,17 +112,15 @@ override fun onDestroyView() {
     binding.name.text = viewModel.name
     binding.button.setOnClickListener { viewModel.userClicked() }
 ```
->**참고**: Fragment는 view보다 오래 지속되므로, `onDestroyView()`메소드에서 
->
->Binding Class Instance의 reference를 정리해야 한다.
+>**참고**: Fragment는 view보다 오래 지속되므로, `onDestroyView()`메소드에서 Binding Class Instance의 reference를 정리해야 한다.
 ---
 ## Differences from findViewById
 
 View Binding에는 `findViewById`를 사용하는 것에 비해서 중요한 장점이 있다.
-* **Null safety**: View Binding은 view의 직접 참조를 생성하므로 유효하지 않은 view id로 인해 Null Pointer Exception이 발생할 위험이 없다. 
+* **Null safety**: View Binding은 view의 직접 참조를 생성하므로 유효하지 않은 view id로 인해 `Null Pointer Exception`이 발생할 위험이 없다. 
     또한 layout의 일부 구성에만 view가 있는 경우에는 Binding Class에서 참조를 포함하는 필드가 `@Nullable`로 표시된다.
 * **Type safety**: 각 Binding Class에 있는 필드의 type이 XML 파일에서 참조하는 view와 일치한다.
-    즉, Class Cast Exception이 발생할 위험이 없다.
+    즉, `Class Cast Exception`이 발생할 위험이 없다.
 
 이러한 차이점은 layout과 코드 사이의 비호환성으로 인해 runtime이 아닌 compile time에 build가 실패하게 된다는 것을 의미한다.
 
